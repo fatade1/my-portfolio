@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Art By FFH — Brand &amp; Product Designer</title>
+	<meta name="description"
+		content="Creative Director, Brand Designer &amp; Product Designer crafting strategic brand identities and digital products for startups and tech companies across Africa.">
+	<meta name="author" content="Art By FFH">
+	<meta property="og:title" content="Art By FFH — Brand &amp; Product Designer">
+	<meta property="og:description"
+		content="I build brands that think and products that work. Strategic branding &amp; product design for startups and tech companies.">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/utilities.css">
+	<link rel="stylesheet" href="css/components.css">
+	<script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light') } catch (e) { }</script>
+</head>
+
+<body>
+	<main class="bg-background text-foreground overflow-x-hidden">
+
+		<!-- ===== NAVIGATION ===== -->
+		<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
+			<div class="section-padding flex items-center justify-between h-16 md:h-20">
+				<a href="#" class="flex items-center">
+					<img src="logo.png" alt="Art By FFH" style="height: 40px; width: auto;">
+				</a>
+				<div class="hidden md:flex items-center gap-8">
+					<a href="#about"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">About</a>
+					<a href="#services"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Services</a>
+					<a href="#projects"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Work</a>
+					<a href="#process"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Process</a>
+					<a href="#testimonials"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Testimonials</a>
+					<a href="#contact"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Contact</a>
+					<button
+						class="theme-toggle text-muted-foreground hover:text-foreground transition-colors duration-300"
+						aria-label="Toggle theme"
+						style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;">
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="5"></circle>
+							<line x1="12" y1="1" x2="12" y2="3"></line>
+							<line x1="12" y1="21" x2="12" y2="23"></line>
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+							<line x1="1" y1="12" x2="3" y2="12"></line>
+							<line x1="21" y1="12" x2="23" y2="12"></line>
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+						</svg>
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+						</svg>
+					</button>
+					<a href="#contact"
+						class="text-sm font-heading font-semibold bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors">Let's
+						Talk</a>
+				</div>
+				<button id="menu-toggle" class="md:hidden text-foreground" aria-label="Toggle menu">
+					<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round">
+						<line x1="4" x2="20" y1="12" y2="12"></line>
+						<line x1="4" x2="20" y1="6" y2="6"></line>
+						<line x1="4" x2="20" y1="18" y2="18"></line>
+					</svg>
+					<svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" style="display:none;">
+						<line x1="18" x2="6" y1="6" y2="18"></line>
+						<line x1="6" x2="18" y1="6" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Mobile Nav Overlay -->
+		<div id="mobile-nav" class="mobile-nav">
+			<a href="#about">About</a>
+			<a href="#services">Services</a>
+			<a href="#projects">Work</a>
+			<a href="#process">Process</a>
+			<a href="#testimonials">Testimonials</a>
+			<a href="#contact">Contact</a>
+			<button class="theme-toggle" aria-label="Toggle theme"
+				style="background:none;border:none;cursor:pointer;padding:8px;color:hsl(var(--foreground));display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.125rem;font-weight:600;">
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="5"></circle>
+					<line x1="12" y1="1" x2="12" y2="3"></line>
+					<line x1="12" y1="21" x2="12" y2="23"></line>
+					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+					<line x1="1" y1="12" x2="3" y2="12"></line>
+					<line x1="21" y1="12" x2="23" y2="12"></line>
+					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+				</svg>
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					style="display:none;">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+				</svg>
+			</button>
+		</div>
+
+		<!-- ===== HERO ===== -->
+		<style>
+			.hero-layout {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
+			}
+
+			@media (min-width: 768px) {
+				.hero-layout {
+					flex-direction: row;
+					align-items: center;
+					gap: 3rem;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.hero-layout {
+					gap: 4rem;
+				}
+			}
+
+			.hero-content {
+				flex: 1 1 0%;
+				min-width: 0;
+			}
+
+			.hero-portrait {
+				flex-shrink: 0;
+				position: relative;
+				width: 325px;
+				height: auto;
+			}
+
+			@media (min-width: 640px) {
+				.hero-portrait {
+					width: 375px;
+				}
+			}
+
+			@media (min-width: 768px) {
+				.hero-portrait {
+					width: 425px;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.hero-portrait {
+					width: 500px;
+				}
+			}
+
+			.hero-portrait img {
+				width: 100%;
+				height: auto;
+				display: block;
+				position: relative;
+				z-index: 1;
+				filter: drop-shadow(0 0 40px hsl(var(--primary) / 0.25));
+			}
+
+			/* Soft glow behind the image */
+			.hero-portrait::after {
+				content: "";
+				position: absolute;
+				inset: 10%;
+				border-radius: 50%;
+				background: radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%);
+				z-index: 0;
+				animation: hero-glow 3s ease-in-out infinite alternate;
+			}
+
+			/* Floating animation */
+			@keyframes hero-float {
+
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+
+				50% {
+					transform: translateY(-12px);
+				}
+			}
+
+			@keyframes hero-glow {
+				0% {
+					opacity: 0.5;
+					transform: scale(1);
+				}
+
+				100% {
+					opacity: 1;
+					transform: scale(1.1);
+				}
+			}
+
+			.hero-portrait {
+				animation: hero-float 5s ease-in-out infinite;
+			}
+
+			/* Available badge */
+			.hero-badge {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 2;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				background: hsl(var(--card));
+				border: 1px solid hsl(var(--border) / 0.5);
+				border-radius: 9999px;
+				padding: 6px 14px;
+				font-family: "Space Grotesk", system-ui, sans-serif;
+				font-size: 0.75rem;
+				font-weight: 600;
+				color: hsl(var(--foreground));
+				white-space: nowrap;
+				box-shadow: 0 4px 20px hsl(var(--primary) / 0.15);
+			}
+
+			.hero-badge-dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: #22c55e;
+				animation: badge-blink 2s ease-in-out infinite;
+			}
+
+			@keyframes badge-blink {
+
+				0%,
+				100% {
+					opacity: 1;
+				}
+
+				50% {
+					opacity: 0.3;
+				}
+			}
+		</style>
+		<section class="relative min-h-screen flex items-center overflow-hidden">
+			<div class="absolute inset-0">
+				<img src="assets/hero-bg.jpg" alt="" class="w-full h-full object-cover opacity-40">
+				<div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background"></div>
+			</div>
+			<div class="relative z-10 section-padding w-full pt-32 pb-20">
+				<div class="max-w-7xl mx-auto">
+					<div class="hero-layout">
+						<!-- Text Column -->
+						<div class="hero-content">
+							<p
+								class="text-primary font-heading font-medium text-sm md:text-base tracking-[0.2em] uppercase mb-6 fade-in-section">
+								Creative Director · Brand Designer · Product Designer</p>
+							<h1
+								class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight mb-8 fade-in-section">
+								I Build Brands<br>That <span class="gradient-text">Think</span><br><span
+									class="text-muted-foreground">and Products</span><br>That <span
+									class="gradient-text">Work.</span></h1>
+							<p
+								class="text-secondary-foreground font-body text-base md:text-lg max-w-xl leading-relaxed mb-10 fade-in-section">
+								I craft strategic brand identities and design digital products that drive growth — for
+								startups,
+								tech companies, and forward-thinking businesses across Africa and beyond.</p>
+							<div class="flex flex-wrap gap-4 fade-in-section">
+								<a href="#projects"
+									class="font-heading font-semibold bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-all duration-300 text-sm md:text-base">View
+									Jobs</a>
+								<a href="#contact"
+									class="font-heading font-semibold border border-foreground/20 text-foreground px-8 py-4 rounded-md hover:bg-foreground/5 transition-all duration-300 text-sm md:text-base">Let's
+									Work Together</a>
+							</div>
+						</div>
+						<!-- Profile Image Column -->
+						<div class="hero-portrait fade-in-section">
+							<img src="fatade.png" alt="FFH — Brand & Product Designer">
+							<div class="hero-badge">
+								<span class="hero-badge-dot"></span>
+								Available for work
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+					<div id="scroll-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+							<path d="M12 5v14"></path>
+							<path d="m19 12-7 7-7-7"></path>
+						</svg></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ABOUT ===== -->
+		<section id="about" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+					<div class="fade-in-section">
+						<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4">About Me</p>
+						<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-8">Design
+							is how I<br><span class="gradient-text">solve problems.</span></h2>
+						<div class="space-y-5 text-secondary-foreground font-body leading-relaxed">
+							<p>I'm FFH — a Creative Director, Brand Designer, and Product Designer based in Ibadan,
+								Nigeria. I lead brand strategy and digital product design for startups, tech companies,
+								recruitment firms, fashion brands, analytics companies, and ICT businesses.</p>
+							<p>As the Managing Director of <span class="text-foreground font-medium">Cyber Haven
+									Co-Workspace</span>, I operate at the intersection of creativity, business strategy,
+								and technology. My work spans complete brand identity systems, UI/UX for SaaS platforms
+								and fintech products, and strategic content direction.</p>
+							<p>I don't just design — I build systems that help brands communicate with clarity, connect
+								with their audience, and scale with confidence. Every pixel is intentional. Every brand
+								decision is strategic.</p>
+						</div>
+					</div>
+					<div class="flex flex-col justify-center">
+						<div class="grid grid-cols-2 gap-6 fade-in-section">
+							<div class="card-surface p-6 md:p-8 hover-lift">
+								<div class="font-heading text-3xl md:text-4xl font-bold gradient-text mb-2">200+</div>
+								<div class="text-muted-foreground text-sm font-body">Projects Delivered</div>
+							</div>
+							<div class="card-surface p-6 md:p-8 hover-lift">
+								<div class="font-heading text-3xl md:text-4xl font-bold gradient-text mb-2">150+</div>
+								<div class="text-muted-foreground text-sm font-body">Clients Served</div>
+							</div>
+							<div class="card-surface p-6 md:p-8 hover-lift">
+								<div class="font-heading text-3xl md:text-4xl font-bold gradient-text mb-2">6+</div>
+								<div class="text-muted-foreground text-sm font-body">Years Experience</div>
+							</div>
+							<div class="card-surface p-6 md:p-8 hover-lift">
+								<div class="font-heading text-3xl md:text-4xl font-bold gradient-text mb-2">10+</div>
+								<div class="text-muted-foreground text-sm font-body">Solutions Created</div>
+							</div>
+						</div>
+						<div class="mt-8 flex flex-wrap gap-3">
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">Branding</span>
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">UI/UX</span>
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">Figma</span>
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">Strategy</span>
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">Content</span>
+							<span
+								class="text-xs font-heading font-medium text-muted-foreground border border-border px-4 py-2 rounded-full">Video</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== SERVICES ===== -->
+		<section id="services" class="section-spacing section-padding bg-card/50">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Services
+				</p>
+				<h2
+					class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					What I <span class="gradient-text">bring to the table.</span></h2>
+				<div class="grid md:grid-cols-3 gap-6">
+					<!-- Service: Brand Identity -->
+					<div class="card-surface p-8 md:p-10 hover-lift group fade-in-section">
+						<div
+							class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+								<circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+								<circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+								<circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+								<path
+									d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+								</path>
+							</svg>
+						</div>
+						<h3 class="font-heading text-xl font-bold mb-3 text-foreground">Brand Identity Design</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-6">Strategic brand systems
+							that give your business a distinct, memorable presence in the market.</p>
+						<ul class="space-y-2">
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Logo Systems</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Visual Identity</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Brand Strategy</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Brand Guidelines</li>
+						</ul>
+					</div>
+					<!-- Service: Product Design -->
+					<div class="card-surface p-8 md:p-10 hover-lift group fade-in-section">
+						<div
+							class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<rect width="20" height="14" x="2" y="3" rx="2"></rect>
+								<line x1="8" x2="16" y1="21" y2="21"></line>
+								<line x1="12" x2="12" y1="17" y2="21"></line>
+							</svg>
+						</div>
+						<h3 class="font-heading text-xl font-bold mb-3 text-foreground">Product Design (UI/UX)</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-6">User-centered digital
+							products that are intuitive, scalable, and built for real-world impact.</p>
+						<ul class="space-y-2">
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Web App Design</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>SaaS Dashboards</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Fintech Interfaces</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Mobile App UI</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>UX Flows &amp; Wireframing</li>
+						</ul>
+					</div>
+					<!-- Service: Growth & Creative -->
+					<div class="card-surface p-8 md:p-10 hover-lift group fade-in-section">
+						<div
+							class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<path
+									d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+								</path>
+								<path
+									d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+								</path>
+								<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+								<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+							</svg>
+						</div>
+						<h3 class="font-heading text-xl font-bold mb-3 text-foreground">Growth &amp; Creative Support
+						</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-6">End-to-end creative
+							support to keep your brand consistent and growing across every touchpoint.</p>
+						<ul class="space-y-2">
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Social Media Design</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Packaging Design</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Website Design</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Content Direction</li>
+							<li class="text-sm font-body text-secondary-foreground flex items-center gap-2"><span
+									class="w-1 h-1 rounded-full bg-primary"></span>Brand Consultation</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== PROJECTS ===== -->
+		<section id="projects" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Selected
+					Work</p>
+				<h2
+					class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					Projects that <span class="gradient-text">speak for themselves.</span></h2>
+				<div class="grid md:grid-cols-2 gap-6">
+					<!-- Project: RegSuite -->
+					<a href="projects/regsuite.html"
+						class="group card-surface overflow-hidden hover-lift cursor-pointer fade-in-section">
+						<div class="h-48 md:h-56 overflow-hidden relative">
+							<img src="img/projects/regsuite.png" alt="RegSuite preview"
+								style="width:100%;height:100%;object-fit:cover;">
+							<div
+								class="absolute top-4 right-4 w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" class="text-foreground">
+									<path d="M7 7h10v10"></path>
+									<path d="M7 17 17 7"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="p-6 md:p-8">
+							<p class="text-primary text-xs font-heading tracking-[0.15em] uppercase mb-2">Brand Identity
+								· Product Design</p>
+							<h3 class="font-heading text-xl md:text-2xl font-bold mb-3 text-foreground">RegSuite</h3>
+							<p class="text-muted-foreground font-body text-sm leading-relaxed mb-5">A regulatory SaaS
+								platform for banks. Built the brand from scratch and designed the complete dashboard
+								experience — from compliance workflows to real-time analytics.</p>
+							<div class="flex flex-wrap gap-2">
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">SaaS</span>
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Fintech</span>
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Dashboard
+									UI</span>
+							</div>
+						</div>
+					</a>
+					<!-- Project: ExeChef -->
+					<a href="projects/exechef.html"
+						class="group card-surface overflow-hidden hover-lift cursor-pointer fade-in-section">
+						<div class="h-48 md:h-56 overflow-hidden relative">
+							<img src="img/projects/exechef.png" alt="ExeChef preview"
+								style="width:100%;height:100%;object-fit:cover;">
+							<div
+								class="absolute top-4 right-4 w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" class="text-foreground">
+									<path d="M7 7h10v10"></path>
+									<path d="M7 17 17 7"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="p-6 md:p-8">
+							<p class="text-primary text-xs font-heading tracking-[0.15em] uppercase mb-2">Brand Identity
+								· Web Design</p>
+							<h3 class="font-heading text-xl md:text-2xl font-bold mb-3 text-foreground">ExeChef</h3>
+							<p class="text-muted-foreground font-body text-sm leading-relaxed mb-5">Premium recruitment
+								and staffing brand serving top-tier companies. Created a bold identity system and
+								website that communicates trust, professionalism, and results.</p>
+							<div class="flex flex-wrap gap-2">
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Recruitment</span>
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Branding</span>
+								<span
+									class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Web</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="text-center fade-in-section" style="margin-top: 5rem;">
+					<a href="work.html"
+						class="inline-flex items-center gap-2 font-heading font-semibold bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-all duration-300 text-sm md:text-base">
+						View All Work
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M5 12h14"></path>
+							<path d="m12 5 7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== PROCESS ===== -->
+		<section id="process" class="section-spacing section-padding bg-card/50">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Process</p>
+				<h2
+					class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					How I <span class="gradient-text">get it done.</span></h2>
+				<div class="grid md:grid-cols-5 gap-6">
+					<div class="relative text-center fade-in-section">
+						<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<circle cx="11" cy="11" r="8"></circle>
+								<path d="m21 21-4.3-4.3"></path>
+							</svg>
+						</div>
+						<div class="font-heading text-xs text-muted-foreground mb-1">01</div>
+						<h3 class="font-heading text-lg font-bold text-foreground mb-2">Discover</h3>
+						<p class="text-sm font-body text-muted-foreground leading-relaxed">Deep-dive into your brand,
+							audience, and market to uncover the real opportunity.</p>
+						<div
+							class="hidden md:block absolute top-7 left-[calc(50%_+_36px)] w-[calc(100%_-_48px)] h-[1px] bg-border">
+						</div>
+					</div>
+					<div class="relative text-center fade-in-section">
+						<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<circle cx="12" cy="12" r="10"></circle>
+								<circle cx="12" cy="12" r="6"></circle>
+								<circle cx="12" cy="12" r="2"></circle>
+							</svg>
+						</div>
+						<div class="font-heading text-xs text-muted-foreground mb-1">02</div>
+						<h3 class="font-heading text-lg font-bold text-foreground mb-2">Define</h3>
+						<p class="text-sm font-body text-muted-foreground leading-relaxed">Establish clear strategy,
+							goals, and a design direction that aligns with your vision.</p>
+						<div
+							class="hidden md:block absolute top-7 left-[calc(50%_+_36px)] w-[calc(100%_-_48px)] h-[1px] bg-border">
+						</div>
+					</div>
+					<div class="relative text-center fade-in-section">
+						<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<path
+									d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z">
+								</path>
+								<path
+									d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18">
+								</path>
+								<path d="m2.3 2.3 7.286 7.286"></path>
+								<circle cx="11" cy="11" r="2"></circle>
+							</svg>
+						</div>
+						<div class="font-heading text-xs text-muted-foreground mb-1">03</div>
+						<h3 class="font-heading text-lg font-bold text-foreground mb-2">Design</h3>
+						<p class="text-sm font-body text-muted-foreground leading-relaxed">Craft visual systems and
+							digital experiences that are bold, functional, and on-brand.</p>
+						<div
+							class="hidden md:block absolute top-7 left-[calc(50%_+_36px)] w-[calc(100%_-_48px)] h-[1px] bg-border">
+						</div>
+					</div>
+					<div class="relative text-center fade-in-section">
+						<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+								<path d="M21 3v5h-5"></path>
+								<path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+								<path d="M8 16H3v5"></path>
+							</svg>
+						</div>
+						<div class="font-heading text-xs text-muted-foreground mb-1">04</div>
+						<h3 class="font-heading text-lg font-bold text-foreground mb-2">Refine</h3>
+						<p class="text-sm font-body text-muted-foreground leading-relaxed">Iterate based on feedback,
+							testing, and real-world context until it's perfect.</p>
+						<div
+							class="hidden md:block absolute top-7 left-[calc(50%_+_36px)] w-[calc(100%_-_48px)] h-[1px] bg-border">
+						</div>
+					</div>
+					<div class="relative text-center fade-in-section">
+						<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" class="text-primary">
+								<path
+									d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+								</path>
+								<path
+									d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+								</path>
+								<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+								<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+							</svg>
+						</div>
+						<div class="font-heading text-xs text-muted-foreground mb-1">05</div>
+						<h3 class="font-heading text-lg font-bold text-foreground mb-2">Launch &amp; Scale</h3>
+						<p class="text-sm font-body text-muted-foreground leading-relaxed">Deliver production-ready
+							assets and systems built to grow with your business.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== TESTIMONIALS ===== -->
+		<section id="testimonials" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">
+					Testimonials</p>
+				<h2
+					class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					What clients <span class="gradient-text">say about working with me.</span></h2>
+				<div class="grid md:grid-cols-2 gap-6">
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">"FFH
+							didn't just design our brand — he gave us an identity that people remember. Our investor
+							decks, our product, our website — everything finally feels cohesive."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">Founder &amp; CEO, Arteesa</p>
+						</div>
+					</div>
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">
+							"Working with FFH transformed how we present ourselves to enterprise clients. The
+							RegSuite dashboard he designed reduced our onboarding time by 40%."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">VP of Product, RegSuite</p>
+						</div>
+					</div>
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">"He
+							understood our brand before we could even articulate it. Isemi Africa's visual identity
+							captures the soul of what we're building — modern African luxury."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">Creative Director, Isemi Africa</p>
+						</div>
+					</div>
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">"FFH
+							is rare — he thinks like a strategist and executes like a world-class designer. ExeChef's
+							rebrand directly contributed to a 3x increase in inbound leads."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">Managing Partner, ExeChef Staffing</p>
+						</div>
+					</div>
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">"The rebranding effort completely shifted how our users view our platform. It went from feeling like a rigid tool to a modern, dynamic digital experience."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">Head of Marketing, Tradiu</p>
+						</div>
+					</div>
+					<div class="card-surface p-8 md:p-10 hover-lift fade-in-section">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="text-primary/30 mb-4">
+							<path
+								d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+							<path
+								d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+							</path>
+						</svg>
+						<p class="font-body text-secondary-foreground leading-relaxed mb-6 text-sm md:text-base">"It is rare to find a designer who balances creativity with deep product thinking. The mobile app interface is not just beautiful, it dramatically improved our user retention."</p>
+						<div>
+							<p class="text-muted-foreground text-xs font-body uppercase tracking-[0.1em] font-semibold">Product Manager, MyHome</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== INSIGHTS ===== -->
+		<section class="section-spacing section-padding bg-card/50">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Insights
+				</p>
+				<h2
+					class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					Thinking out <span class="gradient-text">loud.</span></h2>
+				<div class="grid md:grid-cols-3 gap-6">
+					<a href="insights/social-media.html" class="block card-surface p-8 hover-lift group cursor-pointer fade-in-section">
+						<span class="text-xs font-heading text-primary tracking-[0.15em] uppercase">Branding</span>
+						<h3
+							class="font-heading text-lg font-bold text-foreground mt-3 mb-3 group-hover:text-primary transition-colors">
+							Social Media Presence ≠ Branding</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-4">Most businesses confuse
+							being active on social media with having a brand. Here's why that's dangerous — and what
+							actually builds brand equity.</p>
+						<div class="flex items-center gap-1 text-primary text-sm font-heading font-medium">Read more
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path d="M7 7h10v10"></path>
+								<path d="M7 17 17 7"></path>
+							</svg>
+						</div>
+					</a>
+					<a href="insights/saas-dashboard.html" class="block card-surface p-8 hover-lift group cursor-pointer fade-in-section">
+						<span class="text-xs font-heading text-primary tracking-[0.15em] uppercase">Product
+							Design</span>
+						<h3
+							class="font-heading text-lg font-bold text-foreground mt-3 mb-3 group-hover:text-primary transition-colors">
+							Why Your SaaS Dashboard Isn't Converting</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-4">The difference between a
+							product people tolerate and one they love comes down to three UX principles most teams
+							ignore.</p>
+						<div class="flex items-center gap-1 text-primary text-sm font-heading font-medium">Read more
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path d="M7 7h10v10"></path>
+								<path d="M7 17 17 7"></path>
+							</svg>
+						</div>
+					</a>
+					<a href="insights/roi-design-systems.html" class="block card-surface p-8 hover-lift group cursor-pointer fade-in-section">
+						<span class="text-xs font-heading text-primary tracking-[0.15em] uppercase">Strategy</span>
+						<h3
+							class="font-heading text-lg font-bold text-foreground mt-3 mb-3 group-hover:text-primary transition-colors">
+							The ROI of Design Systems</h3>
+						<p class="text-muted-foreground font-body text-sm leading-relaxed mb-4">How investing in a
+							structured design system can cut your product development time in half and create a
+							consistent user experience at scale.</p>
+						<div class="flex items-center gap-1 text-primary text-sm font-heading font-medium">Read more
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path d="M7 7h10v10"></path>
+								<path d="M7 17 17 7"></path>
+							</svg>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== CONTACT ===== -->
+		<section id="contact" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+					<div class="fade-in-section">
+						<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4">Get In Touch</p>
+						<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Let's
+							build something <span class="gradient-text">remarkable.</span></h2>
+						<p class="text-secondary-foreground font-body leading-relaxed mb-10">Whether you need a brand
+							identity, a digital product, or a creative partner — I'd love to hear from you. Let's
+							discuss how design can move your business forward.</p>
+						<div class="space-y-6">
+							<a href="mailto:artbyffh@gmail.com"
+								class="flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
+								<div
+									class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+										fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" class="text-primary">
+										<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+										<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+									</svg>
+								</div>
+								<span class="font-body">artbyffh@gmail.com</span>
+							</a>
+							<a href="https://wa.me/2347066910472" target="_blank" rel="noopener noreferrer"
+								class="flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
+								<div
+									class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+										fill="currentColor" class="text-primary">
+										<path
+											d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+									</svg>
+								</div>
+								<span class="font-body">+234 706 691 0472</span>
+							</a>
+							<div class="flex gap-3 pt-4">
+								<a href="https://www.linkedin.com/in/tolulope-fatade-020203194/" target="_blank"
+									rel="noopener noreferrer"
+									class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all"
+									aria-label="LinkedIn">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+										fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round">
+										<path
+											d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+										</path>
+										<rect width="4" height="12" x="2" y="9"></rect>
+										<circle cx="4" cy="4" r="2"></circle>
+									</svg>
+								</a>
+								<a href="https://www.instagram.com/artbyffh" target="_blank" rel="noopener noreferrer"
+									class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all"
+									aria-label="Instagram">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+										fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round">
+										<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+										<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+										<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+									</svg>
+								</a>
+								<a href="https://www.behance.com/theffh" target="_blank" rel="noopener noreferrer"
+									class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all"
+									aria-label="Behance">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+										fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round">
+										<path
+											d="M1 12.5C1 7.25 5.25 3 10.5 3h3C18.75 3 23 7.25 23 12.5S18.75 22 13.5 22h-3C5.25 22 1 17.75 1 12.5z">
+										</path>
+										<path d="M7 8h3.5a2.5 2.5 0 0 1 0 5H7V8z"></path>
+										<path d="M7 13h4a2.5 2.5 0 0 1 0 5H7v-5z"></path>
+										<path d="M15 8h4"></path>
+										<path d="M15 10h4"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<form id="contact-form" class="card-surface p-8 md:p-10 space-y-5 fade-in-section">
+						<div class="grid sm:grid-cols-2 gap-5">
+							<div>
+								<label
+									class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Name</label>
+								<input type="text" name="name" required
+									class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+									placeholder="Your name">
+							</div>
+							<div>
+								<label
+									class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Email</label>
+								<input type="email" name="email" required
+									class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+									placeholder="you@company.com">
+							</div>
+						</div>
+						<div class="grid sm:grid-cols-2 gap-5">
+							<div>
+								<label
+									class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Company</label>
+								<input type="text" name="company"
+									class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+									placeholder="Company name">
+							</div>
+							<div>
+								<label
+									class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Budget
+									Range</label>
+								<select name="budget"
+									class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors">
+									<option value="">Select range</option>
+									<option value="1k-3k">$1,000 – $3,000</option>
+									<option value="3k-5k">$3,000 – $5,000</option>
+									<option value="5k-10k">$5,000 – $10,000</option>
+									<option value="10k+">$10,000+</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<label
+								class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Project
+								Type</label>
+							<select name="project_type"
+								class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors">
+								<option value="">Select type</option>
+								<option value="branding">Branding</option>
+								<option value="product">Product Design</option>
+								<option value="both">Both</option>
+							</select>
+						</div>
+						<div>
+							<label
+								class="block text-xs font-heading text-muted-foreground mb-2 uppercase tracking-wider">Message</label>
+							<textarea name="message" required rows="4"
+								class="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors resize-none"
+								placeholder="Tell me about your project..."></textarea>
+						</div>
+						<button type="submit"
+							class="w-full font-heading font-semibold bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">Send
+							Message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path
+									d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+								</path>
+								<path d="m21.854 2.147-10.94 10.939"></path>
+							</svg></button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FOOTER ===== -->
+		<footer class="section-padding py-12 border-t border-border/30">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+				<a href="#" class="flex items-center">
+					<img src="logo.png" alt="Art By FFH" style="height: 40px; width: auto;">
+				</a>
+				<p class="text-muted-foreground text-sm font-body">© 2026 Art By FFH. Designed with intention.</p>
+			</div>
+		</footer>
+
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

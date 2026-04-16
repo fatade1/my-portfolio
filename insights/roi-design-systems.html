@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ROI of Design Systems — Art By FFH</title>
+    <meta name="description"
+        content="How investing in a structured design system can cut your product development time in half and create a consistent user experience at scale.">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light') } catch (e) { }</script>
+</head>
+
+<body>
+    <main class="bg-background text-foreground overflow-x-hidden">
+
+        <!-- ===== NAVIGATION ===== -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
+            <div class="section-padding flex items-center justify-between h-16 md:h-20">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../logo.png" alt="Art By FFH" style="height: 40px; width: auto;">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="../index.html#about" class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">About</a>
+                    <a href="../index.html#services" class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">Services</a>
+                    <a href="../work.html" class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">Work</a>
+                    <a href="../index.html#insights" class="text-sm font-body text-foreground transition-colors duration-300">Insights</a>
+                    <a href="../index.html#contact" class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">Contact</a>
+                    <button class="theme-toggle text-muted-foreground hover:text-foreground transition-colors duration-300" aria-label="Toggle theme" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;">
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <a href="../index.html#contact" class="text-sm font-heading font-semibold bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors">Let's Talk</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden text-foreground" aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <line x1="18" x2="6" y1="6" y2="18"></line>
+                        <line x1="6" x2="18" y1="6" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-nav" class="mobile-nav">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../work.html">Work</a>
+            <a href="../index.html#insights">Insights</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+        <!-- ===== ARTICLE HEADER ===== -->
+        <section class="section-padding pt-32 pb-10">
+            <div class="max-w-3xl mx-auto">
+                <a href="../index.html#insights" class="inline-flex items-center gap-2 text-sm font-heading font-medium text-muted-foreground hover:text-primary transition-colors mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                    Back to Insights
+                </a>
+                <p class="text-primary font-heading font-medium text-sm tracking-[0.1em] uppercase mb-4 fade-in-section">Strategy</p>
+                <h1 class="font-heading text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-6 fade-in-section">The ROI of Design Systems</h1>
+                <p class="text-muted-foreground font-body text-base md:text-lg mb-8 fade-in-section">Discover how investing early in a structured design system doesn't just improve aesthetics—it drastically reduces technical debt and accelerates time-to-market.</p>
+                
+                <div class="flex items-center gap-4 fade-in-section border-t border-border/30 pt-6">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-muted">
+                        <img src="../fatade.png" alt="Author" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div>
+                        <div class="font-heading font-bold text-foreground text-sm">FFH</div>
+                        <div class="text-xs text-muted-foreground font-body">Design Strategist</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ARTICLE BODY ===== -->
+        <section class="section-padding pb-32">
+            <div class="max-w-3xl mx-auto space-y-8 text-secondary-foreground font-body leading-relaxed md:text-lg">
+                <p class="fade-in-section">When a startup is pushing to release a Minimum Viable Product (MVP), speed is the highest priority. In this rush, design systems are often viewed as an unnecessary luxury—something "enterprise companies do." But this short-term thinking creates massive long-term roadblocks.</p>
+
+                <h3 class="font-heading text-2xl font-bold text-foreground mt-12 mb-4 fade-in-section">The Chaos of Scale</h3>
+                <p class="fade-in-section">Without a single source of truth for your UI components, typography, and spacing, your interface rapidly fragments. Developer A uses a slightly different button style than Developer B. The padding on the pricing page is somehow entirely disjointed from the dashboard. Eventually, every new feature requires custom CSS, turning the codebase into a fragile jenga tower of technical debt.</p>
+
+                <h3 class="font-heading text-2xl font-bold text-foreground mt-12 mb-4 fade-in-section">Measurable Returns</h3>
+                <div class="p-6 md:p-8 bg-card/50 rounded-2xl border border-border/30 mb-8 fade-in-section">
+                    <p class="mb-4">Implementing a foundational design system offers tangible benefits:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary font-bold mt-0.5">✓</span>
+                            <span><strong>Development Velocity:</strong> Engineering spends less time tweaking padding and colors, and more time building vital business logic. Rapid prototyping becomes effortless.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary font-bold mt-0.5">✓</span>
+                            <span><strong>Brand Trust:</strong> Inconsistencies subconsciously erode trust. A cohesive, pixel-perfect system ensures across-the-board professionalism.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary font-bold mt-0.5">✓</span>
+                            <span><strong>Easier Onboarding:</strong> New designers and developers onboard faster because there is a structured playbook dictating how the product is assembled.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="fade-in-section">A design system is not just a UI kit in Figma. It is a shared vocabulary between design, engineering, and product management. When everyone speaks the same language, teams move faster, build better products, and avoid the devastating friction that slows down scaling companies.</p>
+
+                <div class="mt-16 pt-8 border-t border-border/30 text-center fade-in-section">
+                    <h4 class="font-heading text-xl font-bold mb-4 text-foreground">Time to unify your product ecosystem?</h4>
+                    <a href="../index.html#contact" class="inline-flex items-center justify-center font-heading font-semibold bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-colors">
+                        Get Systematic Consulting
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="section-padding py-12 border-t border-border/30">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../logo.png" alt="Art By FFH" style="height: 40px; width: auto;">
+                </a>
+                <p class="text-muted-foreground text-sm font-body">© 2026 Art By FFH. Designed with intention.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

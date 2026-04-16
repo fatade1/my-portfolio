@@ -1,0 +1,1016 @@
+/* =============================================
+   UTILITIES — Layout, Spacing, Typography, etc.
+   Only classes actually used in the HTML
+   ============================================= */
+
+/* --- Tailwind Transform Variables --- */
+*,
+::before,
+::after {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-backdrop-blur: ;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+}
+
+/* ===================
+   DISPLAY
+   =================== */
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===================
+   POSITION
+   =================== */
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.bottom-10 {
+    bottom: 2.5rem;
+}
+
+.right-4 {
+    right: 1rem;
+}
+
+.top-4 {
+    top: 1rem;
+}
+
+.top-7 {
+    top: 1.75rem;
+}
+
+.left-1\/2 {
+    left: 50%;
+}
+
+.left-\[calc\(100\%_-_8px\)\] {
+    left: calc(100% - 8px);
+}
+
+/* ===================
+   Z-INDEX
+   =================== */
+.z-10 {
+    z-index: 10;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+/* ===================
+   SIZING
+   =================== */
+.w-full {
+    width: 100%;
+}
+
+.w-1 {
+    width: 0.25rem;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+
+.w-12 {
+    width: 3rem;
+}
+
+.w-14 {
+    width: 3.5rem;
+}
+
+.w-\[calc\(100\%_-_48px\)\] {
+    width: calc(100% - 48px);
+}
+
+.w-\[1px\] {
+    width: 1px;
+}
+
+.h-1 {
+    height: 0.25rem;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.h-12 {
+    height: 3rem;
+}
+
+.h-14 {
+    height: 3.5rem;
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-\[1px\] {
+    height: 1px;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.max-w-5xl {
+    max-width: 64rem;
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+}
+
+.max-w-xl {
+    max-width: 36rem;
+}
+
+/* ===================
+   TRANSFORM
+   =================== */
+.-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* ===================
+   FLEXBOX
+   =================== */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-col-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+/* ===================
+   GAP
+   =================== */
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 0.75rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-5 {
+    gap: 1.25rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-16 {
+    gap: 4rem;
+}
+
+/* ===================
+   GRID
+   =================== */
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ===================
+   MARGIN
+   =================== */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.mb-16 {
+    margin-bottom: 4rem;
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+/* ===================
+   PADDING
+   =================== */
+.p-6 {
+    padding: 1.5rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.py-2\.5 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.pt-4 {
+    padding-top: 1rem;
+}
+
+.pt-32 {
+    padding-top: 8rem;
+}
+
+.pb-20 {
+    padding-bottom: 5rem;
+}
+
+/* ===================
+   SPACING (space-y)
+   =================== */
+.space-y-2> :not([hidden])~ :not([hidden]) {
+    margin-top: 0.5rem;
+}
+
+.space-y-5> :not([hidden])~ :not([hidden]) {
+    margin-top: 1.25rem;
+}
+
+.space-y-6> :not([hidden])~ :not([hidden]) {
+    margin-top: 1.5rem;
+}
+
+/* ===================
+   BORDER
+   =================== */
+.border {
+    border-width: 1px;
+}
+
+.border-b {
+    border-bottom-width: 1px;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-border {
+    border-color: hsl(var(--border));
+}
+
+.border-border\/30 {
+    border-color: hsl(var(--border) / 0.3);
+}
+
+.border-border\/50 {
+    border-color: hsl(var(--border) / 0.5);
+}
+
+.border-foreground\/20 {
+    border-color: hsl(var(--foreground) / 0.2);
+}
+
+.border-input {
+    border-color: hsl(var(--input));
+}
+
+/* ===================
+   BORDER RADIUS
+   =================== */
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.rounded-lg {
+    border-radius: var(--radius);
+}
+
+.rounded-md {
+    border-radius: calc(var(--radius) - 2px);
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+/* ===================
+   BACKGROUND
+   =================== */
+.bg-background {
+    background-color: hsl(var(--background));
+}
+
+.bg-background\/80 {
+    background-color: hsl(var(--background) / 0.8);
+}
+
+.bg-card\/50 {
+    background-color: hsl(var(--card) / 0.5);
+}
+
+.bg-foreground\/5 {
+    background-color: hsl(var(--foreground) / 0.05);
+}
+
+.bg-muted {
+    background-color: hsl(var(--muted));
+}
+
+.bg-primary {
+    background-color: hsl(var(--primary));
+}
+
+.bg-primary\/10 {
+    background-color: hsl(var(--primary) / 0.1);
+}
+
+/* ===================
+   GRADIENT
+   =================== */
+.bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-background\/60 {
+    --tw-gradient-from: hsl(var(--background) / 0.6) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--background) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-glow\/15 {
+    --tw-gradient-from: hsl(var(--glow) / 0.15) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--glow) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-glow\/20 {
+    --tw-gradient-from: hsl(var(--glow) / 0.2) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--glow) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary\/15 {
+    --tw-gradient-from: hsl(var(--primary) / 0.15) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary\/20 {
+    --tw-gradient-from: hsl(var(--primary) / 0.2) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-background\/80 {
+    --tw-gradient-to: hsl(var(--background) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--background) / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-background {
+    --tw-gradient-to: hsl(var(--background)) var(--tw-gradient-to-position);
+}
+
+.to-glow\/10 {
+    --tw-gradient-to: hsl(var(--glow) / 0.1) var(--tw-gradient-to-position);
+}
+
+.to-primary\/5 {
+    --tw-gradient-to: hsl(var(--primary) / 0.05) var(--tw-gradient-to-position);
+}
+
+.to-primary\/10 {
+    --tw-gradient-to: hsl(var(--primary) / 0.1) var(--tw-gradient-to-position);
+}
+
+/* ===================
+   IMAGE/OBJECT
+   =================== */
+.object-cover {
+    object-fit: cover;
+}
+
+/* ===================
+   TYPOGRAPHY
+   =================== */
+.font-body {
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.font-heading {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.leading-\[0\.95\] {
+    line-height: 0.95;
+}
+
+.leading-relaxed {
+    line-height: 1.625;
+}
+
+.tracking-\[0\.15em\] {
+    letter-spacing: 0.15em;
+}
+
+.tracking-\[0\.2em\] {
+    letter-spacing: 0.2em;
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+/* ===================
+   TEXT COLORS
+   =================== */
+.text-foreground {
+    color: hsl(var(--foreground));
+}
+
+.text-foreground\/10 {
+    color: hsl(var(--foreground) / 0.1);
+}
+
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+.text-primary {
+    color: hsl(var(--primary));
+}
+
+.text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+}
+
+.text-primary\/30 {
+    color: hsl(var(--primary) / 0.3);
+}
+
+.text-secondary-foreground {
+    color: hsl(var(--secondary-foreground));
+}
+
+/* ===================
+   OPACITY
+   =================== */
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-40 {
+    opacity: 0.4;
+}
+
+/* ===================
+   OVERFLOW
+   =================== */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+/* ===================
+   RESIZE
+   =================== */
+.resize-none {
+    resize: none;
+}
+
+/* ===================
+   BACKDROP
+   =================== */
+.backdrop-blur-xl {
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+}
+
+/* ===================
+   TRANSITIONS
+   =================== */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+}
+
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+}
+
+.transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+}
+
+.duration-300 {
+    transition-duration: 0.3s;
+}
+
+.duration-500 {
+    transition-duration: 0.5s;
+}
+
+/* ===================
+   CURSOR
+   =================== */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* ===================
+   HOVER STATES
+   =================== */
+.hover\:bg-foreground\/5:hover {
+    background-color: hsl(var(--foreground) / 0.05);
+}
+
+.hover\:bg-primary\/10:hover {
+    background-color: hsl(var(--primary) / 0.1);
+}
+
+.hover\:bg-primary\/20:hover {
+    background-color: hsl(var(--primary) / 0.2);
+}
+
+.hover\:bg-primary\/90:hover {
+    background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:text-foreground:hover {
+    color: hsl(var(--foreground));
+}
+
+.hover\:text-primary:hover {
+    color: hsl(var(--primary));
+}
+
+.hover\:opacity-100:hover {
+    opacity: 1;
+}
+
+.group:hover .group-hover\:bg-primary\/20 {
+    background-color: hsl(var(--primary) / 0.2);
+}
+
+.group:hover .group-hover\:text-foreground\/20 {
+    color: hsl(var(--foreground) / 0.2);
+}
+
+.group:hover .group-hover\:text-primary {
+    color: hsl(var(--primary));
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+/* ===================
+   FOCUS STATES
+   =================== */
+.focus\:outline-none:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.focus\:ring-1:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-primary:focus {
+    --tw-ring-color: hsl(var(--primary));
+}
+
+.focus\:border-primary:focus {
+    border-color: hsl(var(--primary));
+}
+
+/* ===================
+   PLACEHOLDER
+   =================== */
+.placeholder\:text-muted-foreground::placeholder {
+    color: hsl(var(--muted-foreground));
+}
+
+/* ===================
+   RESPONSIVE — sm (640px)
+   =================== */
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sm\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+
+/* ===================
+   RESPONSIVE — md (768px)
+   =================== */
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex;
+    }
+
+    .md\:hidden {
+        display: none;
+    }
+
+    .md\:block {
+        display: block;
+    }
+
+    .md\:flex-row {
+        flex-direction: row;
+    }
+
+    .md\:mx-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .md\:h-20 {
+        height: 5rem;
+    }
+
+    .md\:h-56 {
+        height: 14rem;
+    }
+
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-cols-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .md\:p-8 {
+        padding: 2rem;
+    }
+
+    .md\:p-10 {
+        padding: 2.5rem;
+    }
+
+    .md\:text-left {
+        text-align: left;
+    }
+
+    .md\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .md\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .md\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+
+    .md\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .md\:text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .md\:text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .md\:opacity-0 {
+        opacity: 0;
+    }
+}
+
+/* ===================
+   RESPONSIVE — lg (1024px)
+   =================== */
+@media (min-width: 1024px) {
+    .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lg\:gap-24 {
+        gap: 6rem;
+    }
+
+    .lg\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .lg\:text-7xl {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+}
+
+/* ===================
+   RESPONSIVE — xl (1280px)
+   =================== */
+@media (min-width: 1280px) {
+    .xl\:text-8xl {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
+
+/* ===================
+   TEXT ALIGNMENT
+   =================== */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}

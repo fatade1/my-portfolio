@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isemi Africa — Art By FFH</title>
+    <meta name="description"
+        content="Isemi Africa — Afrocentric fashion brand identity and packaging design by Art By FFH.">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Space Grotesk", system-ui, sans-serif;
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .gallery-item:nth-child(1) .gallery-placeholder {
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05));
+        }
+
+        .gallery-item:nth-child(2) .gallery-placeholder {
+            background: linear-gradient(135deg, hsl(var(--glow) / 0.12), hsl(var(--primary) / 0.08));
+        }
+
+        .gallery-item:nth-child(3) .gallery-placeholder {
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--glow) / 0.15));
+        }
+
+        .gallery-item:nth-child(4) .gallery-placeholder {
+            background: linear-gradient(135deg, hsl(var(--glow) / 0.1), hsl(var(--primary) / 0.12));
+        }
+
+        .gallery-item:nth-child(5) .gallery-placeholder {
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--glow) / 0.08));
+        }
+    </style>
+    <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+</head>
+
+<body>
+    <main class="bg-background text-foreground overflow-x-hidden">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
+            <div class="section-padding flex items-center justify-between h-16 md:h-20">
+                <a href="../index.html" class="flex items-center"><img src="../logo.png" alt="Art By FFH"
+                        style="height: 40px; width: auto;"></a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="../index.html#about"
+                        class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">About</a>
+                    <a href="../index.html#services"
+                        class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Services</a>
+                    <a href="../work.html"
+                        class="text-sm font-body text-foreground transition-colors duration-300 line-reveal">Work</a>
+                    <a href="../index.html#process"
+                        class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Process</a>
+                    <a href="../index.html#testimonials"
+                        class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Testimonials</a>
+                    <a href="../index.html#contact"
+                        class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Contact</a>
+                    <button class="theme-toggle text-muted-foreground hover:text-foreground transition-colors duration-300" aria-label="Toggle theme" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;">
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <a href="../index.html#contact"
+                        class="text-sm font-heading font-semibold bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors">Let's
+                        Talk</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden text-foreground" aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display:none;">
+                        <line x1="18" x2="6" y1="6" y2="18"></line>
+                        <line x1="6" x2="18" y1="6" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-nav" class="mobile-nav"><a href="../index.html#about">About</a><a
+                href="../index.html#services">Services</a><a href="../work.html">Work</a><a
+                href="../index.html#process">Process</a><a href="../index.html#testimonials">Testimonials</a><a
+                href="../index.html#contact">Contact</a></div>
+
+        <section class="section-padding pt-24 pb-4">
+            <div class="max-w-7xl mx-auto"><a href="../work.html"
+                    class="inline-flex items-center gap-2 text-sm font-heading text-muted-foreground hover:text-primary transition-colors"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>Back to All Work</a></div>
+        </section>
+
+        <section class="section-padding pb-20">
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="h-56 md:h-72 bg-gradient-to-br from-primary/20 to-glow/10 flex items-center justify-center rounded-2xl mb-10 fade-in-section">
+                    <span class="font-heading text-5xl md:text-7xl font-bold text-foreground/10">Isemi Africa</span>
+                </div>
+                <p class="text-primary text-xs font-heading tracking-[0.15em] uppercase mb-3 fade-in-section">Brand
+                    Identity · Packaging</p>
+                <h1
+                    class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground fade-in-section">
+                    Isemi Africa</h1>
+                <p class="text-secondary-foreground font-body text-base leading-relaxed mb-8 fade-in-section">
+                    Afrocentric fashion brand celebrating African heritage through contemporary design. Built a
+                    culturally rich brand identity with packaging that tells a story — capturing the soul of modern
+                    African luxury.</p>
+
+                <div class="space-y-8 text-secondary-foreground font-body leading-relaxed mb-12 fade-in-section">
+                    <div>
+                        <h3 class="font-heading text-lg font-bold text-foreground mb-3">Scope of Work</h3>
+                        <ul class="space-y-2">
+                            <li class="text-sm flex items-center gap-2"><span
+                                    class="w-1 h-1 rounded-full bg-primary shrink-0"></span>Culturally-rooted brand
+                                identity system</li>
+                            <li class="text-sm flex items-center gap-2"><span
+                                    class="w-1 h-1 rounded-full bg-primary shrink-0"></span>Premium packaging design
+                                with storytelling elements</li>
+                            <li class="text-sm flex items-center gap-2"><span
+                                    class="w-1 h-1 rounded-full bg-primary shrink-0"></span>Brand guidelines for
+                                consistency across touchpoints</li>
+                            <li class="text-sm flex items-center gap-2"><span
+                                    class="w-1 h-1 rounded-full bg-primary shrink-0"></span>Visual content direction for
+                                campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-16 fade-in-section">
+                    <span class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Fashion</span>
+                    <span
+                        class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Packaging</span>
+                    <span class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Culture</span>
+                </div>
+
+                <div class="fade-in-section">
+                    <h2 class="font-heading text-2xl font-bold mb-6 text-foreground">Project Gallery</h2>
+                    <div class="project-gallery">
+                        <div class="gallery-item">
+                            <img src="../img/gallery/isemi-africa/1.png" alt="Isemi Africa brand identity" style="width:100%;height:100%;object-fit:cover;">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/gallery/isemi-africa/2.png" alt="Isemi Africa packaging" style="width:100%;height:100%;object-fit:cover;">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/gallery/isemi-africa/3.png" alt="Isemi Africa brand guidelines" style="width:100%;height:100%;object-fit:cover;">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/gallery/isemi-africa/4.png" alt="Isemi Africa campaign" style="width:100%;height:100%;object-fit:cover;">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/gallery/isemi-africa/5.png" alt="Isemi Africa visual content" style="width:100%;height:100%;object-fit:cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="section-padding py-12 border-t border-border/30">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"><a
+                    href="../index.html" class="flex items-center"><img src="../logo.png" alt="Art By FFH"
+                        style="height: 40px; width: auto;"></a>
+                <p class="text-muted-foreground text-sm font-body">© 2026 Art By FFH. Designed with intention.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
