@@ -139,19 +139,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Show success feedback
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = "Message Sent ✓";
+            
+            submitBtn.innerHTML = "Sending...";
             submitBtn.disabled = true;
             submitBtn.style.opacity = "0.7";
 
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = "1";
-                contactForm.reset();
-            }, 3000);
+            fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    submitBtn.innerHTML = "Message Sent ✓";
+                    contactForm.reset();
+                } else {
+                    submitBtn.innerHTML = "Error!";
+                    alert("Oops! There was a problem submitting your form");
+                }
+            }).catch(error => {
+                submitBtn.innerHTML = "Error!";
+                alert("Oops! There was a problem submitting your form");
+            }).finally(() => {
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = "1";
+                }, 3000);
+            });
         });
     }
 
