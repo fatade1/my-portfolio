@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Packages — Art By FFH | Design & Branding Packages</title>
+	<meta name="description"
+		content="Explore curated design packages by Art By FFH — branding kits, website design, social media packages, and à la carte services. Pay securely online.">
+	<meta property="og:title" content="Packages — Art By FFH | Design & Branding Packages">
+	<meta property="og:description"
+		content="Curated design packages for businesses at every stage — from startups to established brands. Branding kits, website design, and more.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://artbyffh.vercel.app/packages.html">
+	<meta property="og:image" content="https://artbyffh.vercel.app/img/og-preview.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://artbyffh.vercel.app/img/og-preview.png">
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/utilities.css">
+	<link rel="stylesheet" href="css/components.css">
+	<script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light') } catch (e) { }</script>
+	<style>
+		/* ========= PACKAGES PAGE STYLES ========= */
+
+		/* Package card */
+		.pkg-card {
+			position: relative;
+			border-radius: var(--radius);
+			border: 1px solid hsl(var(--border) / 0.5);
+			background: hsl(var(--card));
+			overflow: hidden;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.pkg-card:hover {
+			transform: translateY(-6px);
+			box-shadow:
+				0 25px 60px -15px hsl(var(--primary) / 0.2),
+				0 0 0 1px hsl(var(--primary) / 0.1);
+		}
+
+		/* Popular badge */
+		.pkg-popular {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			z-index: 5;
+			background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--glow)));
+			color: white;
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 0.7rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			padding: 5px 12px;
+			border-radius: 9999px;
+		}
+
+		/* Package image container */
+		.pkg-image {
+			width: 100%;
+			height: 320px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.pkg-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+			transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.pkg-card:hover .pkg-image img {
+			transform: scale(1.04);
+		}
+
+		.pkg-image::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 80px;
+			background: linear-gradient(to top, hsl(var(--card)), transparent);
+			pointer-events: none;
+		}
+
+		/* Price display */
+		.pkg-price {
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 2rem;
+			font-weight: 700;
+			background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--glow)));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			line-height: 1;
+		}
+
+		/* Feature list checkmark */
+		.pkg-features li {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			font-size: 0.875rem;
+			color: hsl(var(--secondary-foreground));
+			font-family: 'Inter', system-ui, sans-serif;
+			line-height: 1.6;
+			padding: 4px 0;
+		}
+
+		.pkg-features li::before {
+			content: "";
+			flex-shrink: 0;
+			width: 18px;
+			height: 18px;
+			margin-top: 2px;
+			border-radius: 50%;
+			background: hsl(var(--primary) / 0.15);
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='hsl(225,70%25,55%25)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 11px;
+		}
+
+		/* Pay button */
+		.pkg-pay-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			width: 100%;
+			padding: 14px 24px;
+			border: none;
+			border-radius: var(--radius);
+			background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--glow)));
+			color: white;
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 0.9rem;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.pkg-pay-btn::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(135deg, transparent, hsla(0, 0%, 100%, 0.15));
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.pkg-pay-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 30px -8px hsl(var(--primary) / 0.5);
+		}
+
+		.pkg-pay-btn:hover::before {
+			opacity: 1;
+		}
+
+		.pkg-pay-btn:active {
+			transform: translateY(0);
+		}
+
+		/* Ideal-for badge */
+		.pkg-ideal {
+			display: inline-block;
+			font-size: 0.75rem;
+			font-family: 'Inter', system-ui, sans-serif;
+			color: hsl(var(--muted-foreground));
+			background: hsl(var(--muted));
+			padding: 6px 14px;
+			border-radius: 9999px;
+			line-height: 1.4;
+		}
+
+		/* Pricing table */
+		.price-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0 6px;
+		}
+
+		.price-table tr {
+			transition: all 0.2s ease;
+		}
+
+		.price-table tbody tr:hover {
+			transform: translateX(4px);
+		}
+
+		.price-table td {
+			padding: 14px 20px;
+			background: hsl(var(--card));
+			font-family: 'Inter', system-ui, sans-serif;
+			font-size: 0.875rem;
+			color: hsl(var(--secondary-foreground));
+			border-top: 1px solid hsl(var(--border) / 0.3);
+			border-bottom: 1px solid hsl(var(--border) / 0.3);
+		}
+
+		.price-table td:first-child {
+			border-left: 1px solid hsl(var(--border) / 0.3);
+			border-radius: var(--radius) 0 0 var(--radius);
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-weight: 600;
+			color: hsl(var(--muted-foreground));
+			width: 40px;
+			text-align: center;
+		}
+
+		.price-table td:last-child {
+			border-right: 1px solid hsl(var(--border) / 0.3);
+			border-radius: 0 var(--radius) var(--radius) 0;
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-weight: 700;
+			color: hsl(var(--foreground));
+			text-align: right;
+			white-space: nowrap;
+		}
+
+		.price-table td:last-child .pay-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+			margin-left: 12px;
+			font-size: 0.75rem;
+			font-weight: 600;
+			color: hsl(var(--primary));
+			cursor: pointer;
+			background: none;
+			border: none;
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			transition: opacity 0.2s;
+		}
+
+		.price-table td:last-child .pay-link:hover {
+			opacity: 0.7;
+		}
+
+		/* Social media tier cards */
+		.sm-tier {
+			text-align: center;
+			padding: 2.5rem 2rem;
+			border-radius: var(--radius);
+			border: 1px solid hsl(var(--border) / 0.5);
+			background: hsl(var(--card));
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.sm-tier:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 20px 50px -15px hsl(var(--primary) / 0.15);
+		}
+
+		.sm-tier-name {
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 0.8rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			color: hsl(var(--primary));
+			margin-bottom: 0.75rem;
+		}
+
+		.sm-tier-count {
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: hsl(var(--foreground));
+			margin-bottom: 1.5rem;
+		}
+
+		.sm-tier-price {
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--glow)));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			margin-bottom: 1.5rem;
+		}
+
+		/* Section divider glow */
+		.section-glow-divider {
+			height: 1px;
+			background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.4), transparent);
+			margin: 0 auto;
+			max-width: 600px;
+		}
+
+		/* Email modal */
+		.email-modal-overlay {
+			position: fixed;
+			inset: 0;
+			z-index: 9999;
+			background: hsla(0, 0%, 0%, 0.7);
+			backdrop-filter: blur(8px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease;
+		}
+
+		.email-modal-overlay.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.email-modal {
+			background: hsl(var(--card));
+			border: 1px solid hsl(var(--border) / 0.5);
+			border-radius: calc(var(--radius) * 2);
+			padding: 2.5rem;
+			width: 90%;
+			max-width: 440px;
+			transform: translateY(20px) scale(0.95);
+			transition: transform 0.3s ease;
+		}
+
+		.email-modal-overlay.active .email-modal {
+			transform: translateY(0) scale(1);
+		}
+
+		.email-modal h3 {
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 1.35rem;
+			font-weight: 700;
+			color: hsl(var(--foreground));
+			margin-bottom: 0.5rem;
+		}
+
+		.email-modal .modal-pkg-name {
+			font-family: 'Inter', system-ui, sans-serif;
+			font-size: 0.85rem;
+			color: hsl(var(--muted-foreground));
+			margin-bottom: 1.5rem;
+		}
+
+		.email-modal input[type="email"] {
+			width: 100%;
+			padding: 14px 16px;
+			border-radius: var(--radius);
+			border: 1px solid hsl(var(--border));
+			background: hsl(var(--muted));
+			color: hsl(var(--foreground));
+			font-family: 'Inter', system-ui, sans-serif;
+			font-size: 0.9rem;
+			outline: none;
+			transition: border-color 0.2s;
+		}
+
+		.email-modal input[type="email"]:focus {
+			border-color: hsl(var(--primary));
+		}
+
+		.email-modal input[type="email"]::placeholder {
+			color: hsl(var(--muted-foreground));
+			opacity: 0.6;
+		}
+
+		.email-modal-actions {
+			display: flex;
+			gap: 12px;
+			margin-top: 1.25rem;
+		}
+
+		.email-modal-actions button {
+			flex: 1;
+			padding: 12px 20px;
+			border-radius: var(--radius);
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-size: 0.85rem;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.2s;
+			border: none;
+		}
+
+		.email-modal-actions .modal-cancel {
+			background: hsl(var(--muted));
+			color: hsl(var(--muted-foreground));
+		}
+
+		.email-modal-actions .modal-cancel:hover {
+			background: hsl(var(--surface-hover));
+		}
+
+		.email-modal-actions .modal-proceed {
+			background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--glow)));
+			color: white;
+		}
+
+		.email-modal-actions .modal-proceed:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 4px 15px hsl(var(--primary) / 0.3);
+		}
+
+		/* Success toast */
+		.success-toast {
+			position: fixed;
+			top: 100px;
+			left: 50%;
+			transform: translateX(-50%) translateY(-20px);
+			z-index: 10000;
+			background: hsl(142, 71%, 45%);
+			color: white;
+			font-family: 'Space Grotesk', system-ui, sans-serif;
+			font-weight: 600;
+			font-size: 0.9rem;
+			padding: 14px 28px;
+			border-radius: 9999px;
+			box-shadow: 0 10px 40px hsla(142, 71%, 45%, 0.3);
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.4s ease;
+		}
+
+		.success-toast.show {
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+		}
+
+		/* Note callout */
+		.price-note {
+			font-family: 'Inter', system-ui, sans-serif;
+			font-size: 0.8rem;
+			color: hsl(var(--muted-foreground));
+			padding: 16px 20px;
+			border-left: 3px solid hsl(var(--primary) / 0.4);
+			background: hsl(var(--primary) / 0.05);
+			border-radius: 0 var(--radius) var(--radius) 0;
+			margin-top: 1.5rem;
+			line-height: 1.6;
+		}
+
+		/* Website design featured card */
+		.web-design-card {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 0;
+			border-radius: var(--radius);
+			border: 1px solid hsl(var(--border) / 0.5);
+			background: hsl(var(--card));
+			overflow: hidden;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		@media (min-width: 768px) {
+			.web-design-card {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.web-design-card:hover {
+			box-shadow: 0 25px 60px -15px hsl(var(--primary) / 0.15);
+		}
+
+		/* Featured kit grid */
+		.kits-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		@media (min-width: 768px) {
+			.kits-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		/* SM tiers grid */
+		.sm-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		@media (min-width: 640px) {
+			.sm-grid {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		/* Responsive price table */
+		@media (max-width: 640px) {
+			.price-table td {
+				padding: 10px 12px;
+				font-size: 0.8rem;
+			}
+
+			.price-table td:last-child {
+				font-size: 0.8rem;
+			}
+
+			.price-table td:last-child .pay-link {
+				display: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main class="bg-background text-foreground overflow-x-hidden">
+
+		<!-- ===== NAVIGATION ===== -->
+		<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
+			<div class="section-padding flex items-center justify-between h-16 md:h-20">
+				<a href="index.html" class="flex items-center">
+					<img src="logo.png" alt="Art By FFH" width="178" height="40" style="height: 40px; width: auto;">
+				</a>
+				<div class="hidden lg:flex items-center gap-8">
+					<a href="index.html#about"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">About</a>
+					<a href="index.html#services"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Services</a>
+					<a href="work.html"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Work</a>
+					<a href="packages.html"
+						class="text-sm font-body text-foreground transition-colors duration-300 line-reveal">Packages</a>
+					<a href="index.html#process"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Process</a>
+					<a href="index.html#testimonials"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Testimonials</a>
+					<a href="index.html#contact"
+						class="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 line-reveal">Contact</a>
+					<button
+						class="theme-toggle text-muted-foreground hover:text-foreground transition-colors duration-300"
+						aria-label="Toggle theme"
+						style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;">
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="5"></circle>
+							<line x1="12" y1="1" x2="12" y2="3"></line>
+							<line x1="12" y1="21" x2="12" y2="23"></line>
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+							<line x1="1" y1="12" x2="3" y2="12"></line>
+							<line x1="21" y1="12" x2="23" y2="12"></line>
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+						</svg>
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+						</svg>
+					</button>
+					<a href="index.html#contact"
+						class="text-sm font-heading font-semibold bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors">Let's
+						Talk</a>
+				</div>
+				<button id="menu-toggle" class="lg:hidden text-foreground" aria-label="Toggle menu">
+					<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round">
+						<line x1="4" x2="20" y1="12" y2="12"></line>
+						<line x1="4" x2="20" y1="6" y2="6"></line>
+						<line x1="4" x2="20" y1="18" y2="18"></line>
+					</svg>
+					<svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" style="display:none;">
+						<line x1="18" x2="6" y1="6" y2="18"></line>
+						<line x1="6" x2="18" y1="6" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Mobile Nav Overlay -->
+		<div id="mobile-nav" class="mobile-nav">
+			<a href="index.html#about">About</a>
+			<a href="index.html#services">Services</a>
+			<a href="work.html">Work</a>
+			<a href="packages.html">Packages</a>
+			<a href="index.html#process">Process</a>
+			<a href="index.html#testimonials">Testimonials</a>
+			<a href="index.html#contact">Contact</a>
+			<button class="theme-toggle" aria-label="Toggle theme"
+				style="background:none;border:none;cursor:pointer;padding:8px;color:hsl(var(--foreground));display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.125rem;font-weight:600;">
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="5"></circle>
+					<line x1="12" y1="1" x2="12" y2="3"></line>
+					<line x1="12" y1="21" x2="12" y2="23"></line>
+					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+					<line x1="1" y1="12" x2="3" y2="12"></line>
+					<line x1="21" y1="12" x2="23" y2="12"></line>
+					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+				</svg>
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					style="display:none;">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+				</svg>
+			</button>
+		</div>
+
+		<!-- ===== PAGE HEADER ===== -->
+		<section class="section-padding pt-32 pb-16">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading font-medium text-sm md:text-base tracking-[0.2em] uppercase mb-6 fade-in-section">
+					Packages & Pricing</p>
+				<h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-8 fade-in-section">
+					Design <span class="gradient-text">Packages.</span></h1>
+				<p class="text-secondary-foreground font-body text-base md:text-lg max-w-2xl leading-relaxed fade-in-section">
+					Curated packages for businesses at every stage — from startups launching their first brand to established companies ready to scale. Choose a kit, or pick individual services à la carte.</p>
+			</div>
+		</section>
+
+		<!-- ===== BRANDING KITS ===== -->
+		<section id="kits" class="section-padding pb-20">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Branding Kits</p>
+				<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					Everything your brand <span class="gradient-text">needs to stand out.</span></h2>
+
+				<div class="kits-grid">
+
+					<!-- ── STARTER KIT ── -->
+					<div class="pkg-card fade-in-section">
+						<div class="pkg-image">
+							<img src="img/packages/starter-kit.jpg" alt="The Starter Kit — ₦70,000" loading="lazy">
+						</div>
+						<div style="padding: 1.75rem;">
+							<h3 class="font-heading text-2xl font-bold text-foreground" style="margin-bottom: 0.5rem;">The Starter Kit</h3>
+							<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1rem; line-height: 1.6;">Perfect for small business owners who just need a strong start.</p>
+							<ul class="pkg-features" style="margin-bottom: 1.25rem;">
+								<li>Professional Logo Design (2 concepts)</li>
+								<li>Business Card Design</li>
+								<li>Brand Color Palette & Typography Guide</li>
+							</ul>
+							<div class="pkg-price" style="margin-bottom: 1rem;">₦70,000</div>
+							<span class="pkg-ideal">Ideal for: Vendors, small shops, or solo entrepreneurs launching their brand</span>
+							<button class="pkg-pay-btn" style="margin-top: 1.25rem;"
+								onclick="openPayment('The Starter Kit', 70000)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<rect width="20" height="14" x="2" y="5" rx="2" />
+									<line x1="2" x2="22" y1="10" y2="10" />
+								</svg>
+								Pay Now
+							</button>
+						</div>
+					</div>
+
+					<!-- ── GROWTH KIT ── -->
+					<div class="pkg-card fade-in-section">
+						<div class="pkg-image">
+							<img src="img/packages/growth-kit.jpg" alt="The Growth Kit — ₦100,000" loading="lazy">
+						</div>
+						<div style="padding: 1.75rem;">
+							<h3 class="font-heading text-2xl font-bold text-foreground" style="margin-bottom: 0.5rem;">The Growth Kit</h3>
+							<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1rem; line-height: 1.6;">For those ready to scale with consistent visuals.</p>
+							<ul class="pkg-features" style="margin-bottom: 1.25rem;">
+								<li>Logo Design (2 options)</li>
+								<li>Business Card Design</li>
+								<li>ID Card Design</li>
+								<li>3 Branded Social Media Flyers</li>
+							</ul>
+							<div class="pkg-price" style="margin-bottom: 1rem;">₦100,000</div>
+							<span class="pkg-ideal">Ideal for: Service-based businesses, startups with small teams, growing personal brands</span>
+							<button class="pkg-pay-btn" style="margin-top: 1.25rem;"
+								onclick="openPayment('The Growth Kit', 100000)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<rect width="20" height="14" x="2" y="5" rx="2" />
+									<line x1="2" x2="22" y1="10" y2="10" />
+								</svg>
+								Pay Now
+							</button>
+						</div>
+					</div>
+
+					<!-- ── PREMIUM KIT ── -->
+					<div class="pkg-card fade-in-section" style="position: relative;">
+						<span class="pkg-popular">Most Popular</span>
+						<div class="pkg-image">
+							<img src="img/packages/premium-kit.jpg" alt="The Premium Kit — ₦220,000" loading="lazy">
+						</div>
+						<div style="padding: 1.75rem;">
+							<h3 class="font-heading text-2xl font-bold text-foreground" style="margin-bottom: 0.5rem;">The Premium Kit</h3>
+							<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1rem; line-height: 1.6;">Take your business from good to unforgettable.</p>
+							<ul class="pkg-features" style="margin-bottom: 1.25rem;">
+								<li>Logo Design (2 options)</li>
+								<li>Business Card Design</li>
+								<li>ID Card Design</li>
+								<li>5 Social Media Flyers</li>
+								<li>Brand Guide / Brochure</li>
+							</ul>
+							<div class="pkg-price" style="margin-bottom: 1rem;">₦220,000</div>
+							<span class="pkg-ideal">Ideal for: Established startups, corporate professionals, businesses serious about visibility</span>
+							<button class="pkg-pay-btn" style="margin-top: 1.25rem;"
+								onclick="openPayment('The Premium Kit', 220000)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<rect width="20" height="14" x="2" y="5" rx="2" />
+									<line x1="2" x2="22" y1="10" y2="10" />
+								</svg>
+								Pay Now
+							</button>
+						</div>
+					</div>
+
+					<!-- ── ULTIMATE KIT ── -->
+					<div class="pkg-card fade-in-section">
+						<div class="pkg-image">
+							<img src="img/packages/ultimate-kit.jpg" alt="The Ultimate Kit — ₦400,000" loading="lazy">
+						</div>
+						<div style="padding: 1.75rem;">
+							<h3 class="font-heading text-2xl font-bold text-foreground" style="margin-bottom: 0.5rem;">The Ultimate Kit</h3>
+							<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1rem; line-height: 1.6;">A complete visual system that defines your brand from day one.</p>
+							<ul class="pkg-features" style="margin-bottom: 1.25rem;">
+								<li>Logo Design (2 options)</li>
+								<li>Full Branding</li>
+								<li>20 Social Media Flyers</li>
+								<li>Brand Guide / Brochure</li>
+							</ul>
+							<div class="pkg-price" style="margin-bottom: 1rem;">₦400,000</div>
+							<span class="pkg-ideal">Ideal for: Established startups, corporate professionals, business owners serious about visibility</span>
+							<button class="pkg-pay-btn" style="margin-top: 1.25rem;"
+								onclick="openPayment('The Ultimate Kit', 400000)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<rect width="20" height="14" x="2" y="5" rx="2" />
+									<line x1="2" x2="22" y1="10" y2="10" />
+								</svg>
+								Pay Now
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Section Divider -->
+		<div class="section-glow-divider"></div>
+
+		<!-- ===== WEBSITE DESIGN ===== -->
+		<section id="website-design" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Website Design</p>
+				<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					Your story, <span class="gradient-text">beautifully told.</span></h2>
+
+				<div class="web-design-card fade-in-section">
+					<div style="overflow: hidden;">
+						<img src="img/packages/website-design.jpg" alt="Website Design Package"
+							style="width:100%;height:100%;object-fit:cover;min-height:350px;" loading="lazy">
+					</div>
+					<div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
+						<h3 class="font-heading text-2xl md:text-3xl font-bold text-foreground" style="margin-bottom: 0.75rem;">Website Design</h3>
+						<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1.5rem; line-height: 1.7;">Clean, modern, and mobile-friendly websites that tell your story and convert visitors into clients.</p>
+						<ul class="pkg-features" style="margin-bottom: 1.5rem;">
+							<li>E-commerce sites</li>
+							<li>Broker / Investment websites</li>
+							<li>Personal web pages</li>
+							<li>Business websites</li>
+							<li>Blog sites, etc.</li>
+						</ul>
+						<div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 1.5rem;">
+							<div class="pkg-price" style="font-size: 2.25rem;">₦400,000</div>
+							<span class="font-body text-sm text-muted-foreground">starting from</span>
+						</div>
+						<button class="pkg-pay-btn" style="max-width: 280px;"
+							onclick="openPayment('Website Design', 400000)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect width="20" height="14" x="2" y="5" rx="2" />
+								<line x1="2" x2="22" y1="10" y2="10" />
+							</svg>
+							Pay Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section Divider -->
+		<div class="section-glow-divider"></div>
+
+		<!-- ===== MOBILE APP DESIGN ===== -->
+		<section id="mobile-app" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Mobile App Design</p>
+				<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					From idea to <span class="gradient-text">interactive prototype.</span></h2>
+
+				<div class="web-design-card fade-in-section" style="direction: rtl;">
+					<div style="overflow: hidden; direction: ltr;">
+						<img src="img/packages/mobile-app-design.jpg" alt="Mobile App Design Package"
+							style="width:100%;height:100%;object-fit:cover;min-height:350px;" loading="lazy">
+					</div>
+					<div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; direction: ltr;">
+						<h3 class="font-heading text-2xl md:text-3xl font-bold text-foreground" style="margin-bottom: 0.75rem;">Mobile App Design</h3>
+						<p class="font-body text-sm text-muted-foreground" style="margin-bottom: 1.5rem; line-height: 1.7;">End-to-end mobile app design — from concept to pixel-perfect prototypes ready for development.</p>
+						<ul class="pkg-features" style="margin-bottom: 1.5rem;">
+							<li>User Research & Strategy</li>
+							<li>Wireframing & Information Architecture</li>
+							<li>High-Fidelity UI Design</li>
+							<li>Interactive Prototype (Figma)</li>
+							<li>UX Flows & User Journey Mapping</li>
+							<li>Design System & Component Library</li>
+						</ul>
+						<div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 1.5rem;">
+							<div class="pkg-price" style="font-size: 2.25rem;">₦600,000</div>
+							<span class="font-body text-sm text-muted-foreground">starting from</span>
+						</div>
+						<button class="pkg-pay-btn" style="max-width: 280px;"
+							onclick="openPayment('Mobile App Design', 600000)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect width="20" height="14" x="2" y="5" rx="2" />
+								<line x1="2" x2="22" y1="10" y2="10" />
+							</svg>
+							Pay Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section Divider -->
+		<div class="section-glow-divider"></div>
+
+		<!-- ===== SOCIAL MEDIA PACKAGES ===== -->
+		<section id="social-media" class="section-spacing section-padding">
+			<div class="max-w-7xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">Social Media Designs</p>
+				<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-16 fade-in-section">
+					Content that makes <span class="gradient-text">people stop scrolling.</span></h2>
+
+				<div class="sm-grid fade-in-section">
+					<!-- Starter -->
+					<div class="sm-tier">
+						<div class="sm-tier-name">Starter</div>
+						<div class="sm-tier-count">5 SM Designs</div>
+						<div class="sm-tier-price">₦50,000</div>
+						<button class="pkg-pay-btn" onclick="openPayment('Social Media – Starter (5 Designs)', 50000)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect width="20" height="14" x="2" y="5" rx="2" />
+								<line x1="2" x2="22" y1="10" y2="10" />
+							</svg>
+							Pay Now
+						</button>
+					</div>
+					<!-- Advanced -->
+					<div class="sm-tier" style="border-color: hsl(var(--primary) / 0.4);">
+						<div class="sm-tier-name">Advanced</div>
+						<div class="sm-tier-count">10 SM Designs</div>
+						<div class="sm-tier-price">₦80,000</div>
+						<button class="pkg-pay-btn" onclick="openPayment('Social Media – Advanced (10 Designs)', 80000)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect width="20" height="14" x="2" y="5" rx="2" />
+								<line x1="2" x2="22" y1="10" y2="10" />
+							</svg>
+							Pay Now
+						</button>
+					</div>
+					<!-- Ultimate -->
+					<div class="sm-tier">
+						<div class="sm-tier-name">Ultimate</div>
+						<div class="sm-tier-count">20 SM Designs</div>
+						<div class="sm-tier-price">₦160,000</div>
+						<button class="pkg-pay-btn" onclick="openPayment('Social Media – Ultimate (20 Designs)', 160000)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect width="20" height="14" x="2" y="5" rx="2" />
+								<line x1="2" x2="22" y1="10" y2="10" />
+							</svg>
+							Pay Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section Divider -->
+		<div class="section-glow-divider"></div>
+
+		<!-- ===== À LA CARTE PRICING ===== -->
+		<section id="pricing" class="section-spacing section-padding">
+			<div class="max-w-4xl mx-auto">
+				<p class="text-primary font-heading text-sm tracking-[0.2em] uppercase mb-4 fade-in-section">À La Carte</p>
+				<h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 fade-in-section">
+					Individual <span class="gradient-text">services.</span></h2>
+				<p class="text-secondary-foreground font-body text-base leading-relaxed mb-12 fade-in-section">
+					Need something specific? Pick exactly what you need from the full price list below.</p>
+
+				<div class="fade-in-section">
+					<table class="price-table">
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Logo Design (1 Sample only)</td>
+								<td>₦50,000 <button class="pay-link" onclick="openPayment('Logo Design (1 Sample)', 50000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Logo Design (2 Samples)</td>
+								<td>₦70,000 <button class="pay-link" onclick="openPayment('Logo Design (2 Samples)', 70000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Full Branding (Logo incl.)</td>
+								<td>₦150,000 <button class="pay-link" onclick="openPayment('Full Branding (Logo incl.)', 150000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Full Branding with Brand Guide <span style="display:block;font-size:0.75rem;color:hsl(var(--muted-foreground));margin-top:2px;">Includes Business card, letterhead, and everything relating to your brand.</span></td>
+								<td>₦250,000 <button class="pay-link" onclick="openPayment('Full Branding with Brand Guide', 250000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Flyer Design</td>
+								<td>₦15,000 <button class="pay-link" onclick="openPayment('Flyer Design', 15000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Banner Design</td>
+								<td>₦20,000 <button class="pay-link" onclick="openPayment('Banner Design', 20000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Business Card Design</td>
+								<td>₦7,000 <button class="pay-link" onclick="openPayment('Business Card Design', 7000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Correction in a finalised design</td>
+								<td>₦5,000 <button class="pay-link" onclick="openPayment('Design Correction', 5000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Bifold Flyer Design</td>
+								<td>₦30,000 <button class="pay-link" onclick="openPayment('Bifold Flyer Design', 30000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Trifold Flyer Design</td>
+								<td>₦40,000 <button class="pay-link" onclick="openPayment('Trifold Flyer Design', 40000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>Invitation Card Design</td>
+								<td>₦10,000 <button class="pay-link" onclick="openPayment('Invitation Card Design', 10000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>Motion Design 30s (without VO)</td>
+								<td>₦40,000 <button class="pay-link" onclick="openPayment('Motion Design 30s (no VO)', 40000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>Motion Design 30s (with VO)</td>
+								<td>₦50,000 <button class="pay-link" onclick="openPayment('Motion Design 30s (with VO)', 50000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td>Motion Design 1min (without VO)</td>
+								<td>₦60,000 <button class="pay-link" onclick="openPayment('Motion Design 1min (no VO)', 60000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td>Motion Design 1min (with VO)</td>
+								<td>₦70,000 <button class="pay-link" onclick="openPayment('Motion Design 1min (with VO)', 70000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td>Motion Design 1min plus</td>
+								<td>₦80,000 <button class="pay-link" onclick="openPayment('Motion Design 1min+', 80000)">Pay →</button></td>
+							</tr>
+							<tr>
+								<td>17</td>
+								<td>Basic Website Design</td>
+								<td>₦400,000 <button class="pay-link" onclick="openPayment('Basic Website Design', 400000)">Pay →</button></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="price-note">
+						<strong>NB:</strong> All prices are susceptible to changes depending on client's preferences. Contact us for custom quotes.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== CTA ===== -->
+		<section class="section-spacing section-padding bg-card/50">
+			<div class="max-w-3xl mx-auto text-center fade-in-section">
+				<h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tight mb-6">Need something <span class="gradient-text">custom?</span></h2>
+				<p class="text-secondary-foreground font-body leading-relaxed mb-10">Don't see exactly what you need? Let's talk about a tailored solution for your brand.</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="index.html#contact"
+						class="font-heading font-semibold bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-all duration-300 text-sm md:text-base">Let's
+						Work Together</a>
+					<a href="https://wa.me/2347066910472" target="_blank" rel="noopener noreferrer"
+						class="font-heading font-semibold border border-foreground/20 text-foreground px-8 py-4 rounded-md hover:bg-foreground/5 transition-all duration-300 text-sm md:text-base flex items-center gap-2">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+							fill="currentColor" class="text-green-500" style="color: #22c55e;">
+							<path
+								d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+						</svg>
+						Chat on WhatsApp
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FOOTER ===== -->
+		<footer class="section-padding py-12 border-t border-border/30">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+				<a href="index.html" class="flex items-center">
+					<img src="logo.png" alt="Art By FFH" width="178" height="40" style="height: 40px; width: auto;">
+				</a>
+				<p class="text-muted-foreground text-sm font-body">© 2026 Art By FFH. Designed with intention.</p>
+			</div>
+		</footer>
+
+	</main>
+
+	<!-- Email Modal -->
+	<div id="email-modal" class="email-modal-overlay" onclick="if(event.target===this)closeModal()">
+		<div class="email-modal">
+			<h3>Complete Payment</h3>
+			<p class="modal-pkg-name" id="modal-pkg-name">Package Name — ₦0</p>
+			<input type="email" id="modal-email" placeholder="Enter your email address" autocomplete="email">
+			<div class="email-modal-actions">
+				<button class="modal-cancel" onclick="closeModal()">Cancel</button>
+				<button class="modal-proceed" onclick="proceedToPaystack()">Proceed to Pay</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Success Toast -->
+	<div id="success-toast" class="success-toast">✓ Payment successful! We'll be in touch shortly.</div>
+
+	<!-- Paystack SDK -->
+	<script src="https://js.paystack.co/v2/inline.js"></script>
+
+	<script>
+		// =============================================
+		// PAYSTACK PAYMENT INTEGRATION
+		// =============================================
+		// Replace with your live Paystack public key
+		const PAYSTACK_PUBLIC_KEY = 'pk_live_0bf042a995ee6224eef4c94250b117ffddbeae3e';
+
+		let currentPackage = '';
+		let currentAmount = 0;
+
+		function openPayment(packageName, amountNaira) {
+			currentPackage = packageName;
+			currentAmount = amountNaira;
+			document.getElementById('modal-pkg-name').textContent = packageName + ' — ₦' + amountNaira.toLocaleString();
+			document.getElementById('modal-email').value = '';
+			document.getElementById('email-modal').classList.add('active');
+			setTimeout(() => document.getElementById('modal-email').focus(), 300);
+		}
+
+		function closeModal() {
+			document.getElementById('email-modal').classList.remove('active');
+		}
+
+		function proceedToPaystack() {
+			const email = document.getElementById('modal-email').value.trim();
+			if (!email || !email.includes('@')) {
+				document.getElementById('modal-email').style.borderColor = 'hsl(0, 84%, 60%)';
+				document.getElementById('modal-email').setAttribute('placeholder', 'Please enter a valid email');
+				return;
+			}
+
+			closeModal();
+
+			const reference = 'FFH-' + currentPackage.replace(/[^a-zA-Z0-9]/g, '-').substring(0, 20) + '-' + Date.now();
+
+			try {
+				const paystack = new PaystackPop();
+				paystack.newTransaction({
+					key: PAYSTACK_PUBLIC_KEY,
+					email: email,
+					amount: currentAmount * 100, // Paystack uses kobo (amount × 100)
+					currency: 'NGN',
+					ref: reference,
+					metadata: {
+						custom_fields: [
+							{
+								display_name: "Package",
+								variable_name: "package",
+								value: currentPackage
+							}
+						]
+					},
+					onSuccess: function (transaction) {
+						showSuccessToast();
+						console.log('Payment successful:', transaction);
+					},
+					onCancel: function () {
+						console.log('Payment cancelled');
+					}
+				});
+			} catch (e) {
+				// Fallback: If Paystack SDK isn't loaded or key is invalid, show a helpful message
+				alert('Payment system is being set up. Please contact artbyffh@gmail.com or WhatsApp +234 706 691 0472 to make payment for: ' + currentPackage + ' (₦' + currentAmount.toLocaleString() + ')');
+				console.error('Paystack error:', e);
+			}
+		}
+
+		function showSuccessToast() {
+			const toast = document.getElementById('success-toast');
+			toast.classList.add('show');
+			setTimeout(() => toast.classList.remove('show'), 4000);
+		}
+
+		// Close modal on Escape
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') closeModal();
+		});
+
+		// Email input — reset error styling on focus
+		document.getElementById('modal-email').addEventListener('focus', function () {
+			this.style.borderColor = '';
+			this.setAttribute('placeholder', 'Enter your email address');
+		});
+	</script>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
