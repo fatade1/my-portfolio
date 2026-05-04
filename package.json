@@ -1,0 +1,19 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Art By FFH - Creative Director, Brand Designer & Product Designer",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "keywords": [
+    "portfolio",
+    "design"
+  ],
+  "author": "Art By FFH",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
