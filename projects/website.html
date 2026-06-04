@@ -54,6 +54,18 @@
         .gallery-item:nth-child(5) .gallery-placeholder {
             background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--glow) / 0.08));
         }
+
+        .live-websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .live-websites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
 </head>
@@ -161,6 +173,108 @@
                     <span class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Web Design</span>
                     <span class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">UI/UX</span>
                     <span class="text-xs font-body text-muted-foreground bg-muted px-3 py-1 rounded-full">Prototyping</span>
+                </div>
+
+                <!-- ===== LIVE WEBSITES ===== -->
+                <div class="fade-in-section mb-16">
+                    <h2 class="font-heading text-2xl font-bold mb-6 text-foreground">Live Websites</h2>
+                    <div class="live-websites-grid">
+                        <!-- MyHome Africa -->
+                        <div class="card-surface hover-lift overflow-hidden flex flex-col justify-between" style="min-height: 250px;">
+                            <div style="padding: 1.75rem 1.75rem 1.25rem;">
+                                <div class="flex items-center justify-between gap-2 mb-4">
+                                    <span class="text-xs font-body text-primary bg-primary/10 px-3 py-1 rounded-full font-semibold tracking-wider uppercase" style="font-size: 0.65rem;">PropTech</span>
+                                    <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700; color: #22c55e; background: rgba(34, 197, 94, 0.1); padding: 3px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+                                        <span style="width: 5px; height: 5px; border-radius: 50%; background: #22c55e;"></span>Live
+                                    </span>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-foreground mb-2" style="line-height: 1.2;">MyHome Africa</h3>
+                                <p class="text-sm font-body text-muted-foreground leading-relaxed" style="line-height: 1.5; font-size: 0.85rem;">A modern real estate platform designed to simplify property search, map discoveries, listings, and home-buying experiences.</p>
+                            </div>
+                            <div style="padding: 1rem 1.75rem 1.75rem; border-top: 1px solid hsl(var(--border) / 0.3); background: hsl(var(--primary) / 0.02); display: flex; align-items: center; justify-content: space-between;">
+                                <a href="https://www.myhomeafrica.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-heading font-semibold text-primary hover:text-primary/80 transition-colors" style="text-decoration: none;">
+                                    Visit Live Site
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Dasham Beauty Lounge -->
+                        <div class="card-surface hover-lift overflow-hidden flex flex-col justify-between" style="min-height: 250px;">
+                            <div style="padding: 1.75rem 1.75rem 1.25rem;">
+                                <div class="flex items-center justify-between gap-2 mb-4">
+                                    <span class="text-xs font-body text-primary bg-primary/10 px-3 py-1 rounded-full font-semibold tracking-wider uppercase" style="font-size: 0.65rem;">Beauty & Wellness</span>
+                                    <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700; color: #22c55e; background: rgba(34, 197, 94, 0.1); padding: 3px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+                                        <span style="width: 5px; height: 5px; border-radius: 50%; background: #22c55e;"></span>Live
+                                    </span>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-foreground mb-2" style="line-height: 1.2;">Dasham Beauty</h3>
+                                <p class="text-sm font-body text-muted-foreground leading-relaxed" style="line-height: 1.5; font-size: 0.85rem;">Premium online booking portal and services showcase designed for an elegant, luxury beauty lounge and wellness center.</p>
+                            </div>
+                            <div style="padding: 1rem 1.75rem 1.75rem; border-top: 1px solid hsl(var(--border) / 0.3); background: hsl(var(--primary) / 0.02); display: flex; align-items: center; justify-content: space-between;">
+                                <a href="https://dasham-beauty.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-heading font-semibold text-primary hover:text-primary/80 transition-colors" style="text-decoration: none;">
+                                    Visit Live Site
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Harvesters FCT -->
+                        <div class="card-surface hover-lift overflow-hidden flex flex-col justify-between" style="min-height: 250px;">
+                            <div style="padding: 1.75rem 1.75rem 1.25rem;">
+                                <div class="flex items-center justify-between gap-2 mb-4">
+                                    <span class="text-xs font-body text-primary bg-primary/10 px-3 py-1 rounded-full font-semibold tracking-wider uppercase" style="font-size: 0.65rem;">Community</span>
+                                    <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700; color: #22c55e; background: rgba(34, 197, 94, 0.1); padding: 3px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+                                        <span style="width: 5px; height: 5px; border-radius: 50%; background: #22c55e;"></span>Live
+                                    </span>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-foreground mb-2" style="line-height: 1.2;">Harvesters FCT</h3>
+                                <p class="text-sm font-body text-muted-foreground leading-relaxed" style="line-height: 1.5; font-size: 0.85rem;">A modern, welcoming digital home designed for the Harvesters church community in Abuja to connect and explore updates.</p>
+                            </div>
+                            <div style="padding: 1rem 1.75rem 1.75rem; border-top: 1px solid hsl(var(--border) / 0.3); background: hsl(var(--primary) / 0.02); display: flex; align-items: center; justify-content: space-between;">
+                                <a href="https://harvesters-fct.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-heading font-semibold text-primary hover:text-primary/80 transition-colors" style="text-decoration: none;">
+                                    Visit Live Site
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Nikky Spade -->
+                        <div class="card-surface hover-lift overflow-hidden flex flex-col justify-between" style="min-height: 250px;">
+                            <div style="padding: 1.75rem 1.75rem 1.25rem;">
+                                <div class="flex items-center justify-between gap-2 mb-4">
+                                    <span class="text-xs font-body text-primary bg-primary/10 px-3 py-1 rounded-full font-semibold tracking-wider uppercase" style="font-size: 0.65rem;">Fashion</span>
+                                    <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700; color: #22c55e; background: rgba(34, 197, 94, 0.1); padding: 3px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+                                        <span style="width: 5px; height: 5px; border-radius: 50%; background: #22c55e;"></span>Live
+                                    </span>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-foreground mb-2" style="line-height: 1.2;">Nikky Spade</h3>
+                                <p class="text-sm font-body text-muted-foreground leading-relaxed" style="line-height: 1.5; font-size: 0.85rem;">Creative online showcase and digital brand identity designed for contemporary high-fashion designer Nikky Spade.</p>
+                            </div>
+                            <div style="padding: 1rem 1.75rem 1.75rem; border-top: 1px solid hsl(var(--border) / 0.3); background: hsl(var(--primary) / 0.02); display: flex; align-items: center; justify-content: space-between;">
+                                <a href="https://nikkyspade.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-heading font-semibold text-primary hover:text-primary/80 transition-colors" style="text-decoration: none;">
+                                    Visit Live Site
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="fade-in-section">
